@@ -8,18 +8,16 @@ using System.Windows.Forms;
 
 namespace atestat_info_2023
 {
-    public partial class SelectionSortInfo : Form
+    public partial class SelectionSortIlustratie : Form
     {
-        public SelectionSortInfo()
+        public SelectionSortIlustratie()
         {
             InitializeComponent();
         }
 
-        private void button_ilustratie_Click(object sender, EventArgs e)
+        private void SelectionSortIlustratie_Load(object sender, EventArgs e)
         {
-            SelectionSortIlustratie s = new SelectionSortIlustratie();
-            this.Close();
-            s.Show();
+            this.Size = new Size(100 * (Variables.n + 1), 30 * (Variables.maxi + 1) + 50);
         }
     }
 }

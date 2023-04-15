@@ -32,6 +32,7 @@ namespace atestat_info_2023
             {
                 Variables.v[i] = Convert.ToInt32(cuv[i]);
             }
+            Variables.maxi = Variables.v.Max();
             Form2 f2 = new Form2();
             this.Hide();
             f2.Show();
