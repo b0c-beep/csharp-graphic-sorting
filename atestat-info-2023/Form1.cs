@@ -32,7 +32,9 @@ namespace atestat_info_2023
             {
                 Variables.v[i] = Convert.ToInt32(cuv[i]);
             }
-            
+            Form2 f2 = new Form2();
+            this.Hide();
+            f2.Show();
         }
     }
 }
