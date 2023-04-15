@@ -17,5 +17,9 @@ namespace atestat_info_2023
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
