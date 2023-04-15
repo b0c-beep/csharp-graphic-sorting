@@ -73,6 +73,16 @@ namespace atestat_info_2023.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap QuickSortInfo {
+            get {
+                object obj = ResourceManager.GetObject("QuickSortInfo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SelectSortInfo {
             get {
                 object obj = ResourceManager.GetObject("SelectSortInfo", resourceCulture);

@@ -14,5 +14,15 @@ namespace atestat_info_2023
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_ilustratie_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
