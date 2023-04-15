@@ -21,5 +21,10 @@ namespace atestat_info_2023
         {
 
         }
+
+        private void button_alegeMetoda_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

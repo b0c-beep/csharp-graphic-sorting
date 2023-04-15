@@ -30,6 +30,7 @@ namespace atestat_info_2023
         private void InitializeComponent()
         {
             this.label_titlu = new System.Windows.Forms.Label();
+            this.button_alegeMetoda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_titlu
@@ -42,11 +43,22 @@ namespace atestat_info_2023
             this.label_titlu.TabIndex = 0;
             this.label_titlu.Text = "Algoritmi de sortare";
             // 
+            // button_alegeMetoda
+            // 
+            this.button_alegeMetoda.Location = new System.Drawing.Point(382, 425);
+            this.button_alegeMetoda.Name = "button_alegeMetoda";
+            this.button_alegeMetoda.Size = new System.Drawing.Size(124, 53);
+            this.button_alegeMetoda.TabIndex = 1;
+            this.button_alegeMetoda.Text = "Alege metoda de sortare";
+            this.button_alegeMetoda.UseVisualStyleBackColor = true;
+            this.button_alegeMetoda.Click += new System.EventHandler(this.button_alegeMetoda_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 553);
+            this.Controls.Add(this.button_alegeMetoda);
             this.Controls.Add(this.label_titlu);
             this.Name = "Form1";
             this.Text = "Atestat";
@@ -59,6 +71,7 @@ namespace atestat_info_2023
         #endregion
 
         private System.Windows.Forms.Label label_titlu;
+        private System.Windows.Forms.Button button_alegeMetoda;
     }
 }
 
