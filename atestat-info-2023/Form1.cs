@@ -24,7 +24,15 @@ namespace atestat_info_2023
 
         private void button_alegeMetoda_Click(object sender, EventArgs e)
         {
-
+            Variables.marimeVector = textbox_marimeVector.Text;
+            Variables.n = Convert.ToInt32(Variables.marimeVector);
+            Variables.valoriVector = textbox_valoriVector.Text;
+            string[] cuv = Variables.valoriVector.Split(' ');
+            for(int i = 0; i < Variables.n; i++)
+            {
+                Variables.v[i] = Convert.ToInt32(cuv[i]);
+            }
+            
         }
     }
 }
