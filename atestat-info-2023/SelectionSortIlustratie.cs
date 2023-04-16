@@ -17,22 +17,21 @@ namespace atestat_info_2023
 
         public void afisareVector()
         {
-            for(int i = 1; i <= Variables.n; i++)
+            for(int i = 0; i < Variables.n; i++)
             {
                 PictureBox PBox1 = new PictureBox();
 
-                PBox1.Location = new System.Drawing.Point(30 * i + 20, 30);
-                PBox1.Size = new System.Drawing.Size(30, Variables.v[--i] * 30 + 20);
-
+                PBox1.Location = new Point(50 * i + 50, 50);
+                PBox1.Size = new System.Drawing.Size(50, Variables.v[i] * 50);
                 PBox1.BackColor = Color.Blue;
 
-                this.Controls.Add(PBox1);
+                Controls.Add(PBox1);
             }
         }
 
         private void SelectionSortIlustratie_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(100 * (Variables.n + 1), 30 * (Variables.maxi + 1) + 50);
+            this.Size = new Size(50 * (Variables.n + 2) + 20, 50 * (Variables.maxi + 3));
             afisareVector();
         }
     }

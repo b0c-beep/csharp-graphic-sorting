@@ -18,8 +18,9 @@ namespace atestat_info_2023
         private void button_ilustratie_Click(object sender, EventArgs e)
         {
             SelectionSortIlustratie s = new SelectionSortIlustratie();
-            this.Hide();
             s.Show();
+            this.Hide();
+            
         }
     }
 }
