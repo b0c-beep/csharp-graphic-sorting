@@ -13,6 +13,8 @@ namespace atestat_info_2023
         PictureBox[] pictureBoxes = new PictureBox[Variables.n];
         public int i = 0;
         public int j = 0;
+        public Point intermPoint;
+        public Size intermSize;
 
         public SelectionSortIlustratie()
         {
@@ -68,17 +70,22 @@ namespace atestat_info_2023
         
         public void sortareVector()
         {
-            
+            if (Variables.v[i] > Variables.v[j])
+            {
+                intermPoint = pictureBoxes[i].Location;
+                intermSize = pictureBoxes[i].Size;
 
-                    if (Variables.v[i] > Variables.v[j])
-                    {
-                        
-                        int aux = Variables.v[i];
-                        Variables.v[i] = Variables.v[j];
-                        Variables.v[j] = aux;
-                    }
+                pictureBoxes[i].Location = pictureBoxes[j].Location;
+                pictureBoxes[i].Size = pictureBoxes[j].Size;
 
-          
+                pictureBoxes[j].Location = intermPoint;
+                pictureBoxes[j].Size = intermSize;
+
+
+                int aux = Variables.v[i];
+                Variables.v[i] = Variables.v[j];
+                Variables.v[j] = aux;
+            }
         }
 
 
@@ -89,9 +96,9 @@ namespace atestat_info_2023
             afisareVector();
             //stergereVector();
            
-            if(i < Variables.n - 1)
+            if(i < Variables.n - 1 - 1)
             {
-                if (j < Variables.n)
+                if (j < Variables.n - 1)
                 {
                     j++;
                 }
@@ -103,7 +110,7 @@ namespace atestat_info_2023
             }
             else
             {
-                timerSelectionSort.Enabled = false;
+                timerSelectionSort.Enabled = false;  
             }
             
         }
