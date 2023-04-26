@@ -18,22 +18,32 @@ namespace atestat_info_2023
         private void button_selectionSort_Click(object sender, EventArgs e)
         {
             SelectionSortInfo ssi = new SelectionSortInfo();
-            this.Close();
+            this.Hide();
             ssi.Show();
         }
 
         private void button_bubbleSort_Click(object sender, EventArgs e)
         {
             BubbleSortInfo bsi = new BubbleSortInfo();
-            this.Close();
+            this.Hide();
             bsi.Show();
         }
 
         private void button_quickSort_Click(object sender, EventArgs e)
         {
             QuickSortInfo qsi = new QuickSortInfo();
-            this.Close();
+            this.Hide();
             qsi.Show();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

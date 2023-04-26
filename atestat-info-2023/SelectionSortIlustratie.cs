@@ -57,6 +57,14 @@ namespace atestat_info_2023
 
         private void SelectionSortIlustratie_Load(object sender, EventArgs e)
         {
+            buttonExit.Visible = true;
+            buttonExit.Enabled = true;
+
+
+            buttonMeniu.Visible = true;
+            buttonMeniu.Visible = true;
+
+
             timerSelectionSort.Enabled = true;
             timerSelectionSort.Interval = 1000;
 
@@ -64,6 +72,13 @@ namespace atestat_info_2023
             j = i + 1;
 
             this.Size = new Size(50 * (Variables.n + 2) + 20, 50 * (Variables.maxi + 3));
+
+            buttonMeniu.Top = 15;
+            buttonMeniu.Left = 15;
+
+            buttonExit.Top = 15;
+            buttonExit.Left = 25 + buttonMeniu.Width;
+
             creeareVector();
             afisareVector();
 
@@ -115,9 +130,28 @@ namespace atestat_info_2023
             }
             else
             {
-                timerSelectionSort.Enabled = false;  
+                timerSelectionSort.Enabled = false;
+
+                //buttonExit.Visible = true;
+                //buttonExit.Enabled = true;
+
+                //buttonMeniu.Visible = true;
+                //buttonMeniu.Visible = true;
             }
             
+        }
+
+        private void buttonMeniu_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Dispose();
+            
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         private void SelectionSortIlustratie_FormClosing(object sender, FormClosingEventArgs e)

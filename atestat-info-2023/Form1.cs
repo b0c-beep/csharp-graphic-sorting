@@ -40,5 +40,10 @@ namespace atestat_info_2023
             f2.Show();
             
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

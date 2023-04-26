@@ -31,17 +31,42 @@ namespace atestat_info_2023
         {
             this.components = new System.ComponentModel.Container();
             this.timerSelectionSort = new System.Windows.Forms.Timer(this.components);
+            this.buttonMeniu = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // timerSelectionSort
             // 
             this.timerSelectionSort.Tick += new System.EventHandler(this.timerSelectionSort_Tick);
             // 
+            // buttonMeniu
+            // 
+            this.buttonMeniu.Location = new System.Drawing.Point(12, 303);
+            this.buttonMeniu.Name = "buttonMeniu";
+            this.buttonMeniu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonMeniu.Size = new System.Drawing.Size(100, 23);
+            this.buttonMeniu.TabIndex = 0;
+            this.buttonMeniu.Text = "Inapoi la meniu";
+            this.buttonMeniu.UseVisualStyleBackColor = true;
+            this.buttonMeniu.Click += new System.EventHandler(this.buttonMeniu_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Location = new System.Drawing.Point(128, 303);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 1;
+            this.buttonExit.Text = "Iesire";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // SelectionSortIlustratie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 338);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonMeniu);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SelectionSortIlustratie";
             this.Text = "Atestat";
@@ -54,5 +79,7 @@ namespace atestat_info_2023
         #endregion
 
         private System.Windows.Forms.Timer timerSelectionSort;
+        private System.Windows.Forms.Button buttonMeniu;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

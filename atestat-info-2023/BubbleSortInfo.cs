@@ -19,5 +19,10 @@ namespace atestat_info_2023
         {
 
         }
+
+        private void BubbleSortInfo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

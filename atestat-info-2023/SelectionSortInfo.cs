@@ -22,5 +22,10 @@ namespace atestat_info_2023
             this.Hide();
             
         }
+
+        private void SelectionSortInfo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
