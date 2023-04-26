@@ -33,6 +33,7 @@ namespace atestat_info_2023
             this.timerSelectionSort = new System.Windows.Forms.Timer(this.components);
             this.buttonMeniu = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.labelInterschimbari = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timerSelectionSort
@@ -60,11 +61,22 @@ namespace atestat_info_2023
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // labelInterschimbari
+            // 
+            this.labelInterschimbari.AutoSize = true;
+            this.labelInterschimbari.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelInterschimbari.Location = new System.Drawing.Point(242, 311);
+            this.labelInterschimbari.Name = "labelInterschimbari";
+            this.labelInterschimbari.Size = new System.Drawing.Size(99, 13);
+            this.labelInterschimbari.TabIndex = 2;
+            this.labelInterschimbari.Text = "Interschimbari: ";
+            // 
             // SelectionSortIlustratie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 338);
+            this.Controls.Add(this.labelInterschimbari);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonMeniu);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -73,6 +85,7 @@ namespace atestat_info_2023
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectionSortIlustratie_FormClosing);
             this.Load += new System.EventHandler(this.SelectionSortIlustratie_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -81,5 +94,6 @@ namespace atestat_info_2023
         private System.Windows.Forms.Timer timerSelectionSort;
         private System.Windows.Forms.Button buttonMeniu;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Label labelInterschimbari;
     }
 }

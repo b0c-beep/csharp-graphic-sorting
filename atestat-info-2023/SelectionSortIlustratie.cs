@@ -16,6 +16,7 @@ namespace atestat_info_2023
         public int last_i = 0, last_j = 0;
         public Point intermPoint;
         public Size intermSize;
+        public int interschimbari = 0;
 
         public SelectionSortIlustratie()
         {
@@ -57,6 +58,8 @@ namespace atestat_info_2023
 
         private void SelectionSortIlustratie_Load(object sender, EventArgs e)
         {
+            interschimbari = 0;
+
             buttonExit.Visible = true;
             buttonExit.Enabled = true;
 
@@ -73,11 +76,15 @@ namespace atestat_info_2023
 
             this.Size = new Size(50 * (Variables.n + 2) + 20, 50 * (Variables.maxi + 3));
 
-            buttonMeniu.Top = 15;
+            buttonMeniu.Top = 25;
             buttonMeniu.Left = 15;
 
-            buttonExit.Top = 15;
+            buttonExit.Top = 25;
             buttonExit.Left = 25 + buttonMeniu.Width;
+
+            labelInterschimbari.Text = "Interschimbari: 0";
+            labelInterschimbari.Top = 5;
+            labelInterschimbari.Left = 15;
 
             creeareVector();
             afisareVector();
@@ -90,6 +97,9 @@ namespace atestat_info_2023
         {
             if (Variables.v[i] > Variables.v[j])
             {
+                interschimbari++;
+                labelInterschimbari.Text = "Interschimbari: " + interschimbari;
+
                 intermPoint = pictureBoxes[i].Location;
                 intermSize = pictureBoxes[i].Size;
 
