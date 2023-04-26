@@ -13,6 +13,7 @@ namespace atestat_info_2023
         PictureBox[] pictureBoxes = new PictureBox[Variables.n];
         public int i = 0;
         public int j = 0;
+        public int last_i = 0, last_j = 0;
         public Point intermPoint;
         public Size intermSize;
 
@@ -36,12 +37,13 @@ namespace atestat_info_2023
 
         public void afisareVector()
         {
-            for(int i = 0; i < Variables.n; i++)
+
+            for (int c = 0; c < Variables.n; c++)
             {
           
-                pictureBoxes[i].Location = new Point(50 * i + 50, 50);
-                pictureBoxes[i].Size = new System.Drawing.Size(50, Variables.v[i] * 50);
-                pictureBoxes[i].Visible = true;
+                pictureBoxes[c].Location = new Point(50 * c + 50, 50);
+                pictureBoxes[c].Size = new System.Drawing.Size(50, Variables.v[c] * 50);
+                pictureBoxes[c].Visible = true;
                 
             }
         }
@@ -64,6 +66,7 @@ namespace atestat_info_2023
             this.Size = new Size(50 * (Variables.n + 2) + 20, 50 * (Variables.maxi + 3));
             creeareVector();
             afisareVector();
+
         }
 
 
@@ -81,7 +84,6 @@ namespace atestat_info_2023
                 pictureBoxes[j].Location = intermPoint;
                 pictureBoxes[j].Size = intermSize;
 
-
                 int aux = Variables.v[i];
                 Variables.v[i] = Variables.v[j];
                 Variables.v[j] = aux;
@@ -95,7 +97,10 @@ namespace atestat_info_2023
             sortareVector();
             afisareVector();
             //stergereVector();
-           
+
+            //last_i = i;
+            //last_j = j;
+
             if(i < Variables.n - 1 - 1)
             {
                 if (j < Variables.n - 1)
@@ -113,6 +118,11 @@ namespace atestat_info_2023
                 timerSelectionSort.Enabled = false;  
             }
             
+        }
+
+        private void SelectionSortIlustratie_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
