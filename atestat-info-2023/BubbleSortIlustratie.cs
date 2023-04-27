@@ -26,7 +26,8 @@ namespace atestat_info_2023
 
         public void creeareVector()
         {
-            for (int i = 0; i <= Variables.n; i++)
+            int i;
+            for (i = 0; i < Variables.n; i++)
             {
                 pictureBoxes[i] = new PictureBox();
                 pictureBoxes[i].Name = "pbBox" + i;
@@ -35,6 +36,7 @@ namespace atestat_info_2023
                 Controls.Add(pictureBoxes[i]);
                 pictureBoxes[i].Visible = false;
             }
+            
         }
 
         public void afisareVector()
@@ -141,6 +143,8 @@ namespace atestat_info_2023
                 if (j < Variables.n - i - 1)
                 {
                     j++;
+                    if (j == Variables.n - i - 1)
+                        j = 0;
                 }
                 else
                 {
@@ -155,7 +159,8 @@ namespace atestat_info_2023
                 timerBubbleSort.Enabled = false;
 
             }
-            
+
+
         }
     }
 }
