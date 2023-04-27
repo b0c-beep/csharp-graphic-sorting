@@ -17,7 +17,9 @@ namespace atestat_info_2023
 
         private void button_ilustratie_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            BubbleSortIlustratie bbsi = new BubbleSortIlustratie();
+            bbsi.Show();
         }
 
         private void BubbleSortInfo_FormClosing(object sender, FormClosingEventArgs e)
