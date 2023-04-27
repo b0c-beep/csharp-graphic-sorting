@@ -19,7 +19,7 @@ namespace atestat_info_2023
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button_alegeMetoda_Click(object sender, EventArgs e)

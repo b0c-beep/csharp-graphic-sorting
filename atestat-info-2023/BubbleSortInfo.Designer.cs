@@ -65,6 +65,7 @@ namespace atestat_info_2023
             this.Controls.Add(this.picturebox_info);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BubbleSortInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atestat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BubbleSortInfo_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_info)).EndInit();
