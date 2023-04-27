@@ -10,7 +10,7 @@ namespace atestat_info_2023
 {
     public partial class BubbleSortIlustratie : Form
     {
-        PictureBox[] pictureBoxes = new PictureBox[Variables.n];
+        PictureBox[] pictureBoxes = new PictureBox[100];
         public int i = 0;
         public int j = 0;
         public int last_i = 0, last_j = 0;
@@ -26,7 +26,7 @@ namespace atestat_info_2023
 
         public void creeareVector()
         {
-            for (int i = 0; i < Variables.n; i++)
+            for (int i = 0; i <= Variables.n; i++)
             {
                 pictureBoxes[i] = new PictureBox();
                 pictureBoxes[i].Name = "pbBox" + i;
@@ -96,7 +96,7 @@ namespace atestat_info_2023
             timerBubbleSort.Interval = 1000;
 
             i = 0;
-            j = i + 1;
+            j = 0;
 
             this.Size = new Size(50 * (Variables.n + 2) + 20, 50 * (Variables.maxi + 3));
 
@@ -145,7 +145,7 @@ namespace atestat_info_2023
                 else
                 {
                     i++;
-                    last_j = j;
+                  
                     j = 0;
                 }
             }
