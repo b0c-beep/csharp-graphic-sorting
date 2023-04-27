@@ -24,20 +24,30 @@ namespace atestat_info_2023
 
         private void button_alegeMetoda_Click(object sender, EventArgs e)
         {
-            Variables.marimeVector = textbox_marimeVector.Text;
-            Variables.n = Convert.ToInt32(Variables.marimeVector);
-            Variables.valoriVector = textbox_valoriVector.Text;
-            string[] cuv = Variables.valoriVector.Split(' ');
-            for(int i = 0; i < Variables.n; i++)
+            string[] cuv;
+            if(string.IsNullOrEmpty(textbox_marimeVector.Text) || string.IsNullOrEmpty(textbox_valoriVector.Text))
             {
-                Variables.v[i] = Convert.ToInt32(cuv[i]);
+                MessageBox.Show("Nu ai completat datele!");
             }
-            Variables.maxi = Variables.v.Max();
+            else
+            {
+                Variables.marimeVector = textbox_marimeVector.Text;
+                Variables.n = Convert.ToInt32(Variables.marimeVector);
+                Variables.valoriVector = textbox_valoriVector.Text;
+                cuv = Variables.valoriVector.Split(' ');
+                for(int i = 0; i < Variables.n; i++)
+                {
+                    Variables.v[i] = Convert.ToInt32(cuv[i]);
+                }
+                Variables.maxi = Variables.v.Max();
             
             
-            Form2 f2 = new Form2();
-            this.Hide();
-            f2.Show();
+                Form2 f2 = new Form2();
+                this.Hide();
+                f2.Show();
+            }
+
+            
             
         }
 
