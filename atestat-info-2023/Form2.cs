@@ -38,11 +38,6 @@ namespace atestat_info_2023
         }
         //-------------------------------------------------------------------------------------------------------
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
         //daca utilizatorul inchide aplicatia, ne asiguram ca toate ferestrele se inchid-------------------------
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
