@@ -42,8 +42,8 @@ namespace atestat_info_2023
             for (int c = 0; c < Variables.n; c++)
             {
           
-                pictureBoxes[c].Location = new Point(50 * c + 50, 50);
-                pictureBoxes[c].Size = new System.Drawing.Size(50, Variables.v[c] * 50);
+                pictureBoxes[c].Location = new Point(Variables.lat * c + Variables.lat, Variables.lat);
+                pictureBoxes[c].Size = new System.Drawing.Size(Variables.lat, Variables.v[c] * Variables.lat);
                 pictureBoxes[c].Visible = true;
                 
             }
@@ -74,7 +74,7 @@ namespace atestat_info_2023
             i = 0;
             j = i + 1;
 
-            this.Size = new Size(50 * (Variables.n + 2) + 20, 50 * (Variables.maxi + 3));
+            this.Size = new Size(Math.Max(Variables.lat * (Variables.n + 2) + 20, 250), Variables.lat * (Variables.maxi + 3));
 
             buttonMeniu.Top = 25;
             buttonMeniu.Left = 15;

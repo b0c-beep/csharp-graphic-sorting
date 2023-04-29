@@ -13,5 +13,6 @@ namespace atestat_info_2023
         public static int n;
         public static int maxi;
         public static int interval = 500;
+        public static int lat = 50;
     }
 }

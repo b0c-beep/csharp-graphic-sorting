@@ -19,7 +19,7 @@ namespace atestat_info_2023
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            Variables.lat = 50;
         }
 
         private void button_alegeMetoda_Click(object sender, EventArgs e)
@@ -46,7 +46,10 @@ namespace atestat_info_2023
                     Variables.v[i] = Convert.ToInt32(cuv[i]);
                 }
                 Variables.maxi = Variables.v.Max();
-            
+                if(Variables.maxi > 10)
+                {
+                    Variables.lat = 20;
+                }
             
                 Form2 f2 = new Form2();
                 this.Hide();
