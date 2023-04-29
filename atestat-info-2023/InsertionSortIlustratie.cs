@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace atestat_info_2023
 {
-    public partial class QuickSortIlustratie : Form
+    public partial class InsertionSortIlustratie : Form
     {
         PictureBox[] pictureBoxes = new PictureBox[100];
         public int i = 0;
@@ -18,7 +18,7 @@ namespace atestat_info_2023
         public Size intermSize;
         public int interschimbari = 0;
 
-        public QuickSortIlustratie()
+        public InsertionSortIlustratie()
         {
             InitializeComponent();
         }

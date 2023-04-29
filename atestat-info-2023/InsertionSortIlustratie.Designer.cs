@@ -1,7 +1,7 @@
 ﻿
 namespace atestat_info_2023
 {
-    partial class QuickSortIlustratie
+    partial class InsertionSortIlustratie
     {
         /// <summary>
         /// Required designer variable.

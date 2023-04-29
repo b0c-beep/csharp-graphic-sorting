@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace atestat_info_2023
 {
-    public partial class QuickSortInfo : Form
+    public partial class InsertionSortInfo : Form
     {
-        public QuickSortInfo()
+        public InsertionSortInfo()
         {
             InitializeComponent();
         }
@@ -22,7 +22,9 @@ namespace atestat_info_2023
 
         private void button_ilustratie_Click(object sender, EventArgs e)
         {
-
+            InsertionSortIlustratie isi = new InsertionSortIlustratie();
+            this.Hide();
+            isi.Show();
         }
 
         private void QuickSortInfo_FormClosing(object sender, FormClosingEventArgs e)

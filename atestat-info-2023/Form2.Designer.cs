@@ -74,7 +74,7 @@ namespace atestat_info_2023
             this.button_quickSort.Name = "button_quickSort";
             this.button_quickSort.Size = new System.Drawing.Size(120, 22);
             this.button_quickSort.TabIndex = 3;
-            this.button_quickSort.Text = "Quick Sort";
+            this.button_quickSort.Text = "Insertion Sort";
             this.button_quickSort.UseVisualStyleBackColor = true;
             this.button_quickSort.Click += new System.EventHandler(this.button_quickSort_Click);
             // 

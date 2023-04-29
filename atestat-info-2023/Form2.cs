@@ -31,7 +31,7 @@ namespace atestat_info_2023
 
         private void button_quickSort_Click(object sender, EventArgs e)
         {
-            QuickSortInfo qsi = new QuickSortInfo();
+            InsertionSortInfo qsi = new InsertionSortInfo();
             this.Hide();
             qsi.Show();
         }

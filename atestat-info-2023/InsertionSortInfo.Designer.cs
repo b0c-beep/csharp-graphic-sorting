@@ -1,7 +1,7 @@
 ﻿
 namespace atestat_info_2023
 {
-    partial class QuickSortInfo
+    partial class InsertionSortInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -36,11 +36,11 @@ namespace atestat_info_2023
             // 
             // picturebox_info
             // 
-            this.picturebox_info.Image = global::atestat_info_2023.Properties.Resources.QuickSortInfo;
+            this.picturebox_info.Image = global::atestat_info_2023.Properties.Resources.InsertionSortInfo;
             this.picturebox_info.Location = new System.Drawing.Point(7, 18);
             this.picturebox_info.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picturebox_info.Name = "picturebox_info";
-            this.picturebox_info.Size = new System.Drawing.Size(1017, 230);
+            this.picturebox_info.Size = new System.Drawing.Size(691, 248);
             this.picturebox_info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturebox_info.TabIndex = 0;
             this.picturebox_info.TabStop = false;
@@ -48,7 +48,7 @@ namespace atestat_info_2023
             // 
             // button_ilustratie
             // 
-            this.button_ilustratie.Location = new System.Drawing.Point(475, 286);
+            this.button_ilustratie.Location = new System.Drawing.Point(304, 292);
             this.button_ilustratie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_ilustratie.Name = "button_ilustratie";
             this.button_ilustratie.Size = new System.Drawing.Size(82, 22);
@@ -57,15 +57,15 @@ namespace atestat_info_2023
             this.button_ilustratie.UseVisualStyleBackColor = true;
             this.button_ilustratie.Click += new System.EventHandler(this.button_ilustratie_Click);
             // 
-            // QuickSortInfo
+            // InsertionSortInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 340);
+            this.ClientSize = new System.Drawing.Size(706, 340);
             this.Controls.Add(this.button_ilustratie);
             this.Controls.Add(this.picturebox_info);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "QuickSortInfo";
+            this.Name = "InsertionSortInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atestat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuickSortInfo_FormClosing);
