@@ -25,7 +25,7 @@ namespace atestat_info_2023
         private void button_alegeMetoda_Click(object sender, EventArgs e)
         {
             string[] cuv;
-            
+
             //stergem spatiile care nu sunt necesare din input-ul textbox-urilor----------------------------
             string s1 = textbox_marimeVector.Text.Trim();
             textbox_marimeVector.Text = s1;
@@ -35,7 +35,7 @@ namespace atestat_info_2023
             //-----------------------------------------------------------------------------------------------
 
             //verificam daca utilizatorul a completat datele necesare------------------------------------------
-            if(string.IsNullOrEmpty(textbox_marimeVector.Text) || string.IsNullOrEmpty(textbox_valoriVector.Text))
+            if (string.IsNullOrEmpty(textbox_marimeVector.Text) || string.IsNullOrEmpty(textbox_valoriVector.Text))
             {
                 MessageBox.Show("Nu ai completat datele!");
             }
@@ -49,7 +49,7 @@ namespace atestat_info_2023
 
                 //stocam valorile si maximul vectorului cu care vom lucra------------
                 cuv = Variables.valoriVector.Split(' ');
-                for(int i = 0; i < Variables.n; i++)
+                for (int i = 0; i < Variables.n; i++)
                 {
                     Variables.v[i] = Convert.ToInt32(cuv[i]);
                     if (Variables.v[i] < 0)
@@ -86,12 +86,19 @@ namespace atestat_info_2023
         //ne asiguram ca sunt tastate doar numere in textbox-uri-------------------------------------------------
         private void textbox_marimeVector_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ' '))
+            {
+                e.Handled = true;
+            }
         }
 
         private void textbox_valoriVector_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ' '))
+            {
+                e.Handled = true;
+            }
+            
         }
         //--------------------------------------------------------------------------------------------------------
     }

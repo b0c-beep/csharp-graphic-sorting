@@ -25,7 +25,7 @@ namespace atestat_info_2023
             InitializeComponent();
         }
 
-        //creearea vectorului de imagini-------------------------------------------------------------
+        //crearea vectorului de imagini-------------------------------------------------------------
         public void creeareVector()
         {
             int i;

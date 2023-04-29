@@ -24,7 +24,7 @@ namespace atestat_info_2023
             InitializeComponent();
         }
 
-        //creearea vectorului de imagini------------------------------------------------------------------
+        //crearea vectorului de imagini------------------------------------------------------------------
         public void creeareVector()
         {
             int i;
@@ -120,7 +120,7 @@ namespace atestat_info_2023
             labelInterschimbari.Left = 15;
             //------------------------------------------------------------------------
 
-            //creearea initiala a vectorului de imagini-------------------------------
+            //crearea initiala a vectorului de imagini-------------------------------
             creeareVector();
             afisareVector();
             //------------------------------------------------------------------------
