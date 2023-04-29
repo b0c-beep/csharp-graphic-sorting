@@ -13,7 +13,7 @@ namespace atestat_info_2023
         PictureBox[] pictureBoxes = new PictureBox[100];
         public int i = 0;
         public int j = 0;
-        public int last_i = 0, last_j = 0;
+        public int p;
         public Point intermPoint;
         public Size intermSize;
         public int interschimbari = 0;
@@ -60,24 +60,24 @@ namespace atestat_info_2023
 
         public void sortareVector()
         {
-            if (Variables.v[j] > Variables.v[j + 1])
+            if (Variables.v[p] < Variables.v[p - 1])
             {
                 interschimbari++;
                 labelInterschimbari.Text = "Interschimbari: " + interschimbari;
 
-                intermPoint = pictureBoxes[j].Location;
-                intermSize = pictureBoxes[j].Size;
+                intermPoint = pictureBoxes[p].Location;
+                intermSize = pictureBoxes[p].Size;
 
-                pictureBoxes[j].Location = pictureBoxes[j + 1].Location;
-                pictureBoxes[j].Size = pictureBoxes[j + 1].Size;
+                pictureBoxes[p].Location = pictureBoxes[p - 1].Location;
+                pictureBoxes[p].Size = pictureBoxes[p - 1].Size;
 
-                pictureBoxes[j + 1].Location = intermPoint;
-                pictureBoxes[j + 1].Size = intermSize;
+                pictureBoxes[p - 1].Location = intermPoint;
+                pictureBoxes[p - 1].Size = intermSize;
 
-                int aux = Variables.v[j];
-                Variables.v[j] = Variables.v[j + 1];
-                Variables.v[j + 1] = aux;
-                //sortat = false;
+                int aux = Variables.v[p];
+                Variables.v[p] = Variables.v[p - 1];
+                Variables.v[p - 1] = aux;
+                
             }
         }
 
@@ -96,7 +96,8 @@ namespace atestat_info_2023
             timerQuickSort.Enabled = true;
             timerQuickSort.Interval = Variables.interval;
 
-            i = 0;
+            i = 1;
+            p = i;
             j = 0;
 
             this.Size = new Size(50 * (Variables.n + 2) + 20, 50 * (Variables.maxi + 3));
@@ -129,29 +130,30 @@ namespace atestat_info_2023
 
         private void timerQuickSort_Tick(object sender, EventArgs e)
         {
-            sortareVector();
-            afisareVector();
+            //sortareVector();
+            //afisareVector();
 
-            if (i < Variables.n - 1)
+            if (i < Variables.n)
             {
-                if (j < Variables.n - i - 1)
+                //p = i;
+                if(p > 0)
                 {
-                    j++;
-                    if (j == Variables.n - i - 1)
-                        j = 0;
+                    sortareVector();
+                    p--;
+                    afisareVector();
+                    
                 }
                 else
                 {
                     i++;
-
-                    j = 0;
+                    p = i;
                 }
             }
             else
             {
-
+                afisareVector();
                 timerQuickSort.Enabled = false;
-
+                MessageBox.Show("Sortare Finalizata!");
             }
         }
 

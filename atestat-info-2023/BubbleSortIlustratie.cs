@@ -157,7 +157,7 @@ namespace atestat_info_2023
             {
                 
                 timerBubbleSort.Enabled = false;
-
+                MessageBox.Show("Sortare Finalizata!");
             }
 
 

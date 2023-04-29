@@ -142,11 +142,7 @@ namespace atestat_info_2023
             {
                 timerSelectionSort.Enabled = false;
 
-                //buttonExit.Visible = true;
-                //buttonExit.Enabled = true;
-
-                //buttonMeniu.Visible = true;
-                //buttonMeniu.Visible = true;
+                MessageBox.Show("Sortare Finalizata!");
             }
             
         }
