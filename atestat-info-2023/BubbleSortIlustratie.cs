@@ -102,7 +102,7 @@ namespace atestat_info_2023
             i = 0;
             j = 0;
 
-            this.Size = new Size(Math.Max(Variables.lat * (Variables.n + 2) + 20, 250), Variables.lat * (Variables.maxi + 3));
+            
 
             buttonMeniu.Top = 25;
             buttonMeniu.Left = 15;
@@ -110,10 +110,7 @@ namespace atestat_info_2023
             buttonExit.Top = 25;
             buttonExit.Left = 25 + buttonMeniu.Width;
 
-            if (Variables.lat != 50)
-            {
-                buttonMeniu.Location = new Point(buttonExit.Left - 15, buttonExit.Top + 40);
-            }
+            
 
 
             labelInterschimbari.Text = "Interschimbari: 0";
@@ -122,6 +119,17 @@ namespace atestat_info_2023
 
             creeareVector();
             afisareVector();
+
+            if (Variables.lat != 50)
+            {
+                buttonExit.Location = new Point(pictureBoxes[Variables.n - 1].Left + pictureBoxes[Variables.n - 1].Width + 20,
+                                                25);
+
+                buttonMeniu.Location = new Point(pictureBoxes[Variables.n - 1].Left + pictureBoxes[Variables.n - 1].Width + 20,
+                                                buttonExit.Top + 40);
+            }
+
+            this.Size = new Size(Math.Max(Variables.lat * (Variables.n + 2) + 20, Math.Max(buttonMeniu.Left + buttonMeniu.Width + 30, 250)), Variables.lat * (Variables.maxi + 3));
         }
 
         private void buttonMeniu_Click(object sender, EventArgs e)
