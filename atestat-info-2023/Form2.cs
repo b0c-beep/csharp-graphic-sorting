@@ -15,6 +15,7 @@ namespace atestat_info_2023
             InitializeComponent();
         }
 
+        //schimbam ferestrele in functie de butonul apasat--------------------------------------------------------
         private void button_selectionSort_Click(object sender, EventArgs e)
         {
             SelectionSortInfo ssi = new SelectionSortInfo();
@@ -35,15 +36,18 @@ namespace atestat_info_2023
             this.Hide();
             qsi.Show();
         }
+        //-------------------------------------------------------------------------------------------------------
 
         private void Form2_Load(object sender, EventArgs e)
         {
 
         }
 
+        //daca utilizatorul inchide aplicatia, ne asiguram ca toate ferestrele se inchid-------------------------
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
         }
+        //-------------------------------------------------------------------------------------------------------
     }
 }
