@@ -25,6 +25,12 @@ namespace atestat_info_2023
         private void button_alegeMetoda_Click(object sender, EventArgs e)
         {
             string[] cuv;
+            string s1 = textbox_marimeVector.Text.Trim();
+            textbox_marimeVector.Text = s1;
+
+            string s2 = textbox_valoriVector.Text.Trim();
+            textbox_valoriVector.Text = s2;
+
             if(string.IsNullOrEmpty(textbox_marimeVector.Text) || string.IsNullOrEmpty(textbox_valoriVector.Text))
             {
                 MessageBox.Show("Nu ai completat datele!");
