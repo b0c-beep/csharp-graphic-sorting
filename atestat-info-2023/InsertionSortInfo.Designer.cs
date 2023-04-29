@@ -44,7 +44,6 @@ namespace atestat_info_2023
             this.picturebox_info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturebox_info.TabIndex = 0;
             this.picturebox_info.TabStop = false;
-            this.picturebox_info.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button_ilustratie
             // 
@@ -68,7 +67,7 @@ namespace atestat_info_2023
             this.Name = "InsertionSortInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atestat";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuickSortInfo_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InsertionSortInfo_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_info)).EndInit();
             this.ResumeLayout(false);
 

@@ -15,21 +15,20 @@ namespace atestat_info_2023
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //trecem in urmatoarea fereastra--------------------------------------------------------------
         private void button_ilustratie_Click(object sender, EventArgs e)
         {
             InsertionSortIlustratie isi = new InsertionSortIlustratie();
             this.Hide();
             isi.Show();
         }
+        //--------------------------------------------------------------------------------------------
 
-        private void QuickSortInfo_FormClosing(object sender, FormClosingEventArgs e)
+        //ne asiguram ca toate ferestrele sunt inchise la iesirea din aplicatie-----------------------
+        private void InsertionSortInfo_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
         }
+        //--------------------------------------------------------------------------------------------
     }
 }
