@@ -82,5 +82,17 @@ namespace atestat_info_2023
             Environment.Exit(0);
         }
         //-------------------------------------------------------------------------------------------------------
+
+        //ne asiguram ca sunt tastate doar numere in textbox-uri-------------------------------------------------
+        private void textbox_marimeVector_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textbox_valoriVector_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+        //--------------------------------------------------------------------------------------------------------
     }
 }

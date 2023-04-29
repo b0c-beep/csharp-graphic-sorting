@@ -66,6 +66,7 @@ namespace atestat_info_2023
             this.textbox_marimeVector.Name = "textbox_marimeVector";
             this.textbox_marimeVector.Size = new System.Drawing.Size(50, 23);
             this.textbox_marimeVector.TabIndex = 2;
+            this.textbox_marimeVector.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_marimeVector_KeyPress);
             // 
             // textbox_valoriVector
             // 
@@ -74,6 +75,7 @@ namespace atestat_info_2023
             this.textbox_valoriVector.Name = "textbox_valoriVector";
             this.textbox_valoriVector.Size = new System.Drawing.Size(378, 23);
             this.textbox_valoriVector.TabIndex = 3;
+            this.textbox_valoriVector.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_valoriVector_KeyPress);
             // 
             // label_marimeVector
             // 
