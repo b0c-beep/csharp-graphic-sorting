@@ -95,7 +95,7 @@ namespace atestat_info_2023
 
 
             timerBubbleSort.Enabled = true;
-            timerBubbleSort.Interval = 1000;
+            timerBubbleSort.Interval = Variables.interval;
 
             i = 0;
             j = 0;

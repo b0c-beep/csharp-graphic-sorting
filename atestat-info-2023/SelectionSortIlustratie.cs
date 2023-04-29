@@ -69,7 +69,7 @@ namespace atestat_info_2023
 
 
             timerSelectionSort.Enabled = true;
-            timerSelectionSort.Interval = 1000;
+            timerSelectionSort.Interval = Variables.interval;
 
             i = 0;
             j = i + 1;
