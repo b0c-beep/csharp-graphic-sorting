@@ -85,8 +85,25 @@ namespace atestat_info_2023
                 //-------------------------------------------------------------------
             }
         }
-        //-------------------------------------------------------------------------------------------
-        private void QuickSortIlustratie_Load(object sender, EventArgs e)
+        //--------------------------------------------------------------------------------------------
+
+        //trecerea in fereastra initiala------------------------------------------------------------------
+        private void buttonMeniu_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Dispose();
+        }
+        //------------------------------------------------------------------------------------------------
+
+        //iesirea din aplicatie-----------------------------------------------------------------------------
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+        //--------------------------------------------------------------------------------------------------
+
+        private void InsertionSortIlustratie_Load(object sender, EventArgs e)
         {
             interschimbari = 0;
 
@@ -99,13 +116,13 @@ namespace atestat_info_2023
             //------------------------------------------------------------------------
 
             //activarea si setarea timer-ului-----------------------------------------
-            timerQuickSort.Enabled = true;
-            timerQuickSort.Interval = Variables.interval;
+            timerInsertionSort.Enabled = true;
+            timerInsertionSort.Interval = Variables.interval;
             //------------------------------------------------------------------------
 
             i = 1;
             p = i;
-            
+
             //setarea initiala a coordonatelor butoanelor------------------------------
             buttonMeniu.Top = 25;
             buttonMeniu.Left = 15;
@@ -113,7 +130,7 @@ namespace atestat_info_2023
             buttonExit.Top = 25;
             buttonExit.Left = 25 + buttonMeniu.Width;
             //-------------------------------------------------------------------------
-           
+
             //setarea label-ului--------------------------------------------------------
             labelInterschimbari.Text = "Interschimbari: 0";
             labelInterschimbari.Top = 5;
@@ -137,38 +154,22 @@ namespace atestat_info_2023
             //---------------------------------------------------------------------------
 
             //setarea marimii ferestrei---------------------------------------------------
-            this.Size = new Size(Math.Max(Variables.lat * (Variables.n + 2) + 20, Math.Max(buttonMeniu.Left + buttonMeniu.Width + 30, 250)), 
+            this.Size = new Size(Math.Max(Variables.lat * (Variables.n + 2) + 20, Math.Max(buttonMeniu.Left + buttonMeniu.Width + 30, 250)),
                                 Variables.lat * (Variables.maxi + 3));
             //----------------------------------------------------------------------------
         }
 
-        //iesirea din aplicatie---------------------------------------------------------------------------
-        private void QuickSortIlustratie_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Environment.Exit(0);
-        }
-        //------------------------------------------------------------------------------------------------
-
-        //trecerea in fereastra initiala------------------------------------------------------------------
-        private void buttonMeniu_Click(object sender, EventArgs e)
-        {
-            Form1 f1 = new Form1();
-            f1.Show();
-            this.Dispose();
-        }
-        //------------------------------------------------------------------------------------------------
-
-        private void timerQuickSort_Tick(object sender, EventArgs e)
+        private void timerInsertionSort_Tick(object sender, EventArgs e)
         {
             //parcurgerea vectorului dupa algoritm---------------------------------------
             if (i < Variables.n)
             {
-                if(p > 0)
+                if (p > 0)
                 {
                     sortareVector();
                     p--;
                     afisareVector();
-                    
+
                 }
                 else
                 {
@@ -180,16 +181,16 @@ namespace atestat_info_2023
             else
             {
                 afisareVector();
-                timerQuickSort.Enabled = false;//finalizarea sortarii
+                timerInsertionSort.Enabled = false;//finalizarea sortarii
                 MessageBox.Show("Sortare Finalizata!");
             }
         }
 
-        //iesirea din aplicatie-----------------------------------------------------------------------------
-        private void buttonExit_Click(object sender, EventArgs e)
+        //iesirea din aplicatie---------------------------------------------------------------------------
+        private void InsertionSortIlustratie_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
         }
-        //---------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------
     }
 }

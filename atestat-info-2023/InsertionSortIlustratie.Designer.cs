@@ -33,7 +33,7 @@ namespace atestat_info_2023
             this.labelInterschimbari = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonMeniu = new System.Windows.Forms.Button();
-            this.timerQuickSort = new System.Windows.Forms.Timer(this.components);
+            this.timerInsertionSort = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // labelInterschimbari
@@ -66,11 +66,11 @@ namespace atestat_info_2023
             this.buttonMeniu.UseVisualStyleBackColor = true;
             this.buttonMeniu.Click += new System.EventHandler(this.buttonMeniu_Click);
             // 
-            // timerQuickSort
+            // timerInsertionSort
             // 
-            this.timerQuickSort.Tick += new System.EventHandler(this.timerQuickSort_Tick);
+            this.timerInsertionSort.Tick += new System.EventHandler(this.timerInsertionSort_Tick);
             // 
-            // QuickSortIlustratie
+            // InsertionSortIlustratie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -78,11 +78,11 @@ namespace atestat_info_2023
             this.Controls.Add(this.labelInterschimbari);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonMeniu);
-            this.Name = "QuickSortIlustratie";
+            this.Name = "InsertionSortIlustratie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atestat";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuickSortIlustratie_FormClosing);
-            this.Load += new System.EventHandler(this.QuickSortIlustratie_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InsertionSortIlustratie_FormClosing);
+            this.Load += new System.EventHandler(this.InsertionSortIlustratie_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,6 +93,6 @@ namespace atestat_info_2023
         private System.Windows.Forms.Label labelInterschimbari;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonMeniu;
-        private System.Windows.Forms.Timer timerQuickSort;
+        private System.Windows.Forms.Timer timerInsertionSort;
     }
 }
