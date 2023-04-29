@@ -108,6 +108,11 @@ namespace atestat_info_2023
             buttonExit.Top = 25;
             buttonExit.Left = 25 + buttonMeniu.Width;
 
+            if (Variables.lat != 50)
+            {
+                buttonMeniu.Location = new Point(buttonExit.Left - 15, buttonExit.Top + 40);
+            }
+
             labelInterschimbari.Text = "Interschimbari: 0";
             labelInterschimbari.Top = 5;
             labelInterschimbari.Left = 15;
